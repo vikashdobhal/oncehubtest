@@ -1,0 +1,333 @@
+/*======== Header Styling Here ========*/
+header{
+    background-color: $white;
+    .collapse{
+        @media screen and (min-width: $mdscreen-size){
+            display: flex;
+        }
+    }
+    .navbar-toggler{
+        border: 0;
+        padding: 0;
+        color: transparent;
+        &:focus{
+            outline: none;
+        }
+        span.navbar-toggler-icon{
+            position: relative;
+            background-image: none;
+            width: 30px;
+            border-top: 2px solid $grey-primary;
+            &::before,
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                border-top: 2px solid $grey-primary;
+            }
+            &:before{
+                top: 8px;
+                width: 70%;
+            }
+            &:after{
+                bottom: 9px;
+            }
+        }
+    }
+    .top-nav{
+        ul{
+            list-style-type: none;
+            justify-content: flex-end;
+            margin-bottom: 0;
+            li{
+                a{
+                    font-size: 0.75rem;
+                    line-height: 1rem;
+                    color: $grey-primary;
+                    font-weight: 600;
+                    letter-spacing: 0.14px;
+                    padding: 0 20px;
+                    text-decoration: none;
+                    &.sign-in{
+                        color: $blue-color;
+                    } 
+                }
+            }
+        }
+    }
+    .navbar{
+        position: relative;
+        @media screen and (min-width: $mdscreen-size){
+            flex-wrap: nowrap;
+        }
+        a.sign-in{
+            position: absolute;
+            right: 66px;
+            top: 15px;
+        }
+    }
+    .navbar-nav{
+        @media screen and (min-width: $mdscreen-size){
+            flex-direction: row;
+        }
+        li.nav-item{
+            a.nav-link{
+                font-size: 1rem;
+                line-height: 1.25rem;
+                color: $grey-primary;
+                font-weight: 600;
+                letter-spacing: 0.18px;
+                @media screen and (min-width: $mdscreen-size){
+                    padding-right: .5rem;
+                    padding-left: .5rem;
+                }
+            }
+        }
+    }
+}
+/*========= Banner Styling Here =======*/
+.banner{
+    background-image: url('../images/banner-img.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 40px 15px 185px;
+    @media screen and (min-width: $mdscreen-size){
+        padding: 40px 15px 332px;
+    }
+    @media screen and (min-width: $lgscreen-size){
+        padding: 60px 15px;
+        background-position: right;
+    }
+    a{
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: $blue-color;
+        font-weight: 600;
+    }
+    .btn-primary{
+        @media screen and (max-width: ($mdscreen-size - 1)){
+            margin: 0 auto;
+        }
+    }
+    .btn-secondary{
+        svg{
+            transform: rotate(90deg);
+            g{
+                stroke: $blue-color;
+            }
+        }
+        &:hover{
+            svg{
+                g{
+                    stroke: $white;
+                }
+            }
+        }
+    }
+}
+/*========== Secondary Nav styling here =======*/
+.secondary-nav{
+    background-color: $grey-primary;
+    a{
+        font-size: 13px;
+        line-height: 17px;
+        color: $white;
+        font-weight: 400;
+        letter-spacing: 0.18px;
+        border-bottom: 2px solid transparent;
+        text-decoration: none;
+        padding: 0 7px 2px;
+        @media screen and (min-width: $mdscreen-size){
+            font-size: 1rem;
+            line-height: 1.5rem;
+            padding: 0 0 2px 0;
+        }
+        &:last-child{
+            border: 2px solid $white;
+            text-align: center;
+            border-radius: 30px;
+            padding: 2px 20px;
+            &:hover{
+                color: $grey-primary;
+                background-color: $white;
+            }
+        }
+        &:hover{
+            color: $white;
+            border-bottom-color: $white;
+        }
+        & + a{
+            @media screen and (min-width: $mdscreen-size){
+                margin-left: 40px;
+            }
+        }
+    }
+}
+/*========== Nutshell Section css here ========*/
+.nutshell-block{
+    background-color: $lighter-blue;
+    h6{
+        font-weight: 600;
+    }
+    p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $grey-primary;
+    }
+    .image-block{
+        img{
+            width: 193px;
+            height: 193px;
+            object-fit: contain;
+        }
+    }
+    .row{
+        &:nth-of-type(even){
+            .image-block{
+                order: 1;
+                @media screen and (min-width: $mdscreen-size){
+                    order: 2;
+                }
+            }
+            .content-block{
+                order: 2;
+                @media screen and (min-width: $mdscreen-size){
+                    order: 1;
+                }
+            }
+        }
+        &:nth-of-type(odd){
+            .image-block{
+                order: 1;
+            }
+            .content-block{
+                order: 2;
+            }
+        }
+    }
+}
+/*============= Try it section css here ==========*/
+.try-it-block{
+    background-color: $grey-light;
+    svg{
+        path{
+            fill: $sky-blue;
+        }
+    }
+    h3{
+        font-weight: 300;
+    }
+}
+/*============= Footer Styling Here ==========*/
+footer{
+    background-color: $grey-primary;
+    .footer-logo{
+        svg{
+            path{
+                fill: $white;
+            }
+        }
+    }
+    .social-links{
+        a{
+            width: 29px;
+            height: 29px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            border-radius: 50%;
+            & + a{
+                margin-left: 10px;
+            }
+            i{
+                color: $white;
+            }
+            &.google-plus{
+                background-color: $light-red;
+            }
+            &.twitter{
+                background-color: $light-blue;
+            }
+            &.facebook{
+                background-color: $dark-blue;
+            }
+            &.linkedin{
+                background-color: $medium-blue;
+            }
+            &.youtube{
+                background-color: $dark-red;
+            }
+        }
+    }
+    h6{
+      color: $white;  
+    }
+    .foot-nav{
+        ul{
+            li{
+                @media screen and (max-width: ($mdscreen-size - 1)){
+                    margin-bottom: 5px;
+                }
+                a{
+                    @media screen and (max-width: ($mdscreen-size - 1)){
+                        padding: 0 10px 3px;
+                        
+                        border-right: 2px solid $white;
+                    }
+                }
+                &:last-child{
+                    @media screen and (max-width: ($mdscreen-size - 1)){
+                        a{
+                            border-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ul{
+        list-style: none;
+        li{
+            a{
+                font-size: 0.8125rem;
+                line-height: 1.0625rem;
+                color: $white;
+                font-weight: 400;
+                text-decoration: none;
+                border-bottom: 2px solid transparent;
+                padding-bottom: 3px;
+                
+                &:hover{
+                    border-bottom-color: $white;
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+           
+        }
+    }
+    .bottom-footer{
+        a{
+            font-size: 0.8125rem;
+            line-height: 1.0625rem;
+            color: $white;
+            font-weight: 400;
+            text-decoration: none;
+            padding: 0 7px;
+            @media screen and (min-width: $mdscreen-size){
+                padding: 0 10px;
+            }
+            &+a{
+                border-left: 2px solid $white;
+            }
+        }
+        p{
+            @media screen and (max-width: ($mdscreen-size - 1)){
+                margin-bottom: 2px;
+            } 
+        }
+    }
+}

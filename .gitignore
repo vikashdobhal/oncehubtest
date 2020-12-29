@@ -1,0 +1,74 @@
+# Boilerplate .gitignore for Simply Design Group
+# Original: https://wpengine.com/wp-content/uploads/2013/10/recommended-gitignore-no-wp.txt
+
+*~
+.DS_Store
+.svn
+.cvs
+*.bak
+*.swp
+*.scssc
+Thumbs.db
+.htaccess
+node_modules
+
+# Ignore SASS cache files
+*.scssc
+
+# Repo-specific stuff
+!README.md
+CONTRIBUTING.md
+LICENSE
+HISTORY.md
+
+# Site-specific stuff that doesn't need to be in the repo
+# You can remove/comment out .gitignore if you'd like that in the repo
+composer.lock
+apple-touch-icon*
+favicon.ico
+
+# For those that use Local by Flywheel for development
+wp-content/mu-plugins/local-by-flywheel-demo-urls.php
+local-adminer-*
+
+# I added this file to be able to keep local/dev notes on a project
+# If you want a place to keep local notes, simply name the file: .notes.txt
+.notes.txt
+
+# I added this to ignore files named like: file.bak.ext
+*.bak.*
+
+# large/disallowed file types
+# a CDN should be used for these
+*.hqx
+*.bin
+*.exe
+*.dll
+*.deb
+*.dmg
+*.iso
+*.img
+*.msi
+*.msp
+*.msm
+*.mid
+*.midi
+*.kar
+*.mp3
+*.ogg
+*.m4a
+*.ra
+*.3gpp
+*.3gp
+*.mp4
+*.mpeg
+*.mpg
+*.mov
+*.webm
+*.flv
+*.m4v
+*.mng
+*.asx
+*.asf
+*.wmv
+*.avi
